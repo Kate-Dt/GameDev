@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sphere : MonoBehaviour {
+public class Sphere : ReactiveObstacle {
 
 	private Rigidbody rb;
 	// Use this for initialization
-	void Start () {
+	protected override void OnPlayerHere () {
 		rb = GetComponent<Rigidbody>();
 		rb.velocity = new Vector3 (0, 0, -10);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

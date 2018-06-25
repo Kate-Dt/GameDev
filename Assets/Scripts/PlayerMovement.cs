@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
-
+public class PlayerMovement : MonoBehaviour
+{
+    public static PlayerMovement current;
 
     public Rigidbody rigidbody;
-    public float forwardForce = 2000f;
-    public float sidewayForce = 500f;
+    public float forwardForce = 1f;
+    public float sidewayForce = 1f;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
+	    current = this;
         rigidbody = GetComponent<Rigidbody>();
 	}
 	
