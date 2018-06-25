@@ -1,5 +1,6 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Assertions.Comparers;
 
 public class Score : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class Score : MonoBehaviour {
 
     void Update()
     {
-        scoreText.text = player.position.z.ToString("0");
+        float f = player.position.z;
+        if(!float.IsNaN(f))
+            scoreText.text = player.position.z.ToString("0");
     }
 }
