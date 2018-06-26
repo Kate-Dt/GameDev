@@ -29,4 +29,8 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+	public void OpenMenu() {
+		Time.timeScale = 1f;
+		SceneManager.LoadScene("StartMenu");
+	}
 }
