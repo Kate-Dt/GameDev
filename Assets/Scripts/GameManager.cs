@@ -4,9 +4,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     bool gameEnded = false;
-
     public float restartDelay = 2f;
-
     public GameObject completeLevelUI;
 
     public void CompleteLevel()
@@ -23,14 +21,18 @@ public class GameManager : MonoBehaviour {
         }
 
     }
+	public void LoadNextLevel()
+	{
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
 
-    void Restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 	public void OpenMenu() {
-		Time.timeScale = 1f;
 		SceneManager.LoadScene("StartMenu");
+		Time.timeScale = 1f;
 	}
 }
