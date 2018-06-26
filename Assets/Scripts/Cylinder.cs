@@ -34,6 +34,6 @@ public class Cylinder : MonoBehaviour {
 		Vector3 target = !going_to_b ? pointA : pointB;
 		Vector3 pos = this.transform.position;
 		target.y = target.z = pos.y = pos.z = 0;
-		return Vector3.Distance(pos, target) < 0.1f;
+		return Vector3.Distance(pos, target) < 0.5f;
 	}
 }

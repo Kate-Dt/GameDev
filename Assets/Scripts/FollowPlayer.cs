@@ -9,5 +9,9 @@ public class FollowPlayer : MonoBehaviour {
 	void Update () {
 		if(!float.IsNaN(player.position.x))
 			transform.position = player.position + offset;
+		else
+		{
+			FindObjectOfType<GameManager>().EndGame();
+		}
 	}
 }
